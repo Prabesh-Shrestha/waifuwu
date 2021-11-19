@@ -14,7 +14,6 @@
 					imglink = res["url"];
 				})
 				.catch();
-			console.log(imglink);
 		} else {
 			fetch(url + "nsfw/" + cat)
 				.then((res) => res.json())
@@ -22,7 +21,6 @@
 					imglink = res["url"];
 				})
 				.catch();
-			console.log(imglink);
 		}
 	};
 </script>
