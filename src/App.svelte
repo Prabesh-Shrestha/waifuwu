@@ -6,7 +6,7 @@
 	const url = "https://api.waifu.pics/";
 	let sfw = true;
 	const handlepls = (cat) => {
-		cat = cat['cat']
+		cat = cat["cat"];
 		if (sfw) {
 			fetch(url + "sfw/" + cat)
 				.then((res) => res.json())
@@ -26,6 +26,7 @@
 </script>
 
 <main>
+	<p class="main-title">Waifuwu!!!</p>
 	<Image {imglink} />
 	<hr />
 	Controls:
@@ -34,3 +35,10 @@
 		<button on:click={() => handlepls({ cat })}>{cat}</button>
 	{/each}
 </main>
+
+<style>
+	.main-title {
+		font-size: xx-large;
+		text-align: center;
+	}
+</style>
